@@ -1,0 +1,4 @@
+# SpamShield Configuration
+enabled: true
+max_messages_per_5_seconds: 5
+warn_player: true
