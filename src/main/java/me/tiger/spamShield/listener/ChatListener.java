@@ -16,12 +16,15 @@ public class ChatListener implements Listener {
 
     @EventHandler
     public void onChat(AsyncPlayerChatEvent event) {
-        Player player = event.getPlayer();
-        String message = event.getMessage();
+        if (!SpamShield.getInstance().isEnabledFilter()) return; // plugin disabled
 
+        Player player = event.getPlayer();
+
+        if (player.isOp()) return; // OPs bypass filter
+
+        String message = event.getMessage();
         String previous = lastMessage.get(player.getUniqueId());
 
-        // Cancel message if it's identical to the last one
         if (previous != null && message.equalsIgnoreCase(previous)) {
             event.setCancelled(true);
             return;
