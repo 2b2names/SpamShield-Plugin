@@ -1,4 +1,7 @@
 name: SpamShield
-version: '1.0'
-main: me.tiger.spamShield.SpamShield
-api-version: '1.21'
+version: 1.0
+main: me.tiger.spamshield.SpamShield
+api-version: 1.21
+author: 2b2t_names
+description: Prevents repeated spam messages in chat
+commands: {}
