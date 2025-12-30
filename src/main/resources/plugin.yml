@@ -1,0 +1,4 @@
+name: SpamShield
+version: '1.0'
+main: me.tiger.spamShield.SpamShield
+api-version: '1.21'
